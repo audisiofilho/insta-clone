@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components/native";
-import { MaterialCommunityIcons } from "@expo/vector-icons";
+import { EvilIcons, Feather, MaterialCommunityIcons } from "@expo/vector-icons";
 
 const Container = styled.View`
   width: 100%;
@@ -31,26 +31,25 @@ const BottomPlus = styled.TouchableOpacity`
 const BottomHeart = styled.TouchableOpacity`
   width: 30px;
   height: 30px;
-  margin-left: 20px;
+  margin-left: 10px;
   background-color: transparent;
   align-items: center;
   justify-content: center;
 `;
 
 const BottomSend = styled.TouchableOpacity`
-  width: 30px;
-  height: 30px;
+  width: 40px;
+  height: 40px;
   margin-top: -5px;
-  margin-left: 20px;
+  margin-left: 6px;
   background-color: transparent;
   align-items: center;
   justify-content: center;
-  transform: rotate(335deg); 
 `;
 
 const Logo = styled.Image`
-  width: 150px;
-  height: 50px;
+  width: 135px;
+  height: 45px;
   align-items: center;
   justify-content: center;
 `;
@@ -64,10 +63,10 @@ const AppBar = () => {
           <MaterialCommunityIcons name="plus" size={22} />
         </BottomPlus>
         <BottomHeart>
-          <MaterialCommunityIcons name="heart-outline" size={32} />
+          <EvilIcons name="heart" size={35} />
         </BottomHeart>
         <BottomSend>
-          <MaterialCommunityIcons name="send" size={32}/>
+          <Feather name="send" size={27}/>
         </BottomSend>
       </Row>
     </Container>

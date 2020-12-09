@@ -2,6 +2,7 @@ import React from "react";
 import { ScrollView, StatusBar } from "react-native";
 import styled from "styled-components/native";
 import AppBar from "./components/AppBar";
+import Post from "./components/Post";
 import Story from "./components/Story";
 
 const Container = styled.SafeAreaView`
@@ -16,6 +17,7 @@ const App = () => {
         <ScrollView>
           <AppBar />
           <Story />
+          <Post />
         </ScrollView>
 
       </Container>
