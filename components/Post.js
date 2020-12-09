@@ -14,6 +14,7 @@ const PostHeader = styled.View`
   width: 100%;
   height: 55px;
   flex-direction: row;
+  background-color: blue;
   align-items: center;
 `;
 
@@ -71,7 +72,7 @@ const Text = styled.Text`
 const BottomPoints = styled.TouchableOpacity`
   width: 30px;
   height: 30px;
-  margin-left: 200px;
+  margin-left: auto;
   background-color: transparent;
   align-items: center;
   justify-content: center;
@@ -126,7 +127,10 @@ const BottomSave = styled.TouchableOpacity`
 
 const Post = () => {
   return (
+    <>
+    
     <Container>
+    <ScrollView showsVerticalScrollIndicator={false}>
       <PostHeader>
         <Card>
           <CardPoster>
@@ -158,7 +162,42 @@ const Post = () => {
               <FontAwesome name="bookmark-o" size={30}/>
           </BottomSave>
       </PostFooter>
+
+      <PostHeader>
+        <Card>
+          <CardPoster>
+            <CardPosterUser source={require("../assets/user2.jpg")} />
+          </CardPoster>
+        </Card>
+        <Text>user2</Text>
+        <BottomPoints>
+            <Entypo name="dots-three-vertical" size={20}/>
+        </BottomPoints>
+      </PostHeader>
+
+      <PostContent>
+          <PostContentUser source={require('../assets/post2.jpg')} />
+
+      </PostContent>
+
+      <PostFooter>
+          <BottomHeart>
+              <EvilIcons name="heart" size={40}/>
+          </BottomHeart>
+          <BottomComment>
+              <EvilIcons name="comment" size={40}/>
+          </BottomComment>
+          <BottomSend>
+              <Feather name="send" size={30}/>
+          </BottomSend>
+          <BottomSave>
+              <FontAwesome name="bookmark-o" size={30}/>
+          </BottomSave>
+      </PostFooter>
+      </ScrollView>
     </Container>
+    
+    </>
   );
 };
 

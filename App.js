@@ -14,8 +14,9 @@ const App = () => {
     <>
       <StatusBar backgroundColor="#ffffff" barStyle="dark-content" />
       <Container>
-        <ScrollView>
+        
           <AppBar />
+        <ScrollView>
           <Story />
           <Post />
         </ScrollView>
