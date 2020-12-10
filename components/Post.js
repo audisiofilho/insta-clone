@@ -2,10 +2,11 @@ import React from "react";
 import styled from "styled-components/native";
 import { ScrollView } from "react-native";
 import { Entypo, EvilIcons, Feather, FontAwesome } from '@expo/vector-icons'
+import Story from "./Story";
 
 const Container = styled.View`
   width: 100%;
-  height: 450px;
+  height: 541px;
   align-items: center;
   justify-content: space-between;
 `;
@@ -14,7 +15,6 @@ const PostHeader = styled.View`
   width: 100%;
   height: 55px;
   flex-direction: row;
-  background-color: blue;
   align-items: center;
 `;
 
@@ -131,6 +131,7 @@ const Post = () => {
     
     <Container>
     <ScrollView showsVerticalScrollIndicator={false}>
+      <Story />
       <PostHeader>
         <Card>
           <CardPoster>
@@ -177,6 +178,38 @@ const Post = () => {
 
       <PostContent>
           <PostContentUser source={require('../assets/post2.jpg')} />
+
+      </PostContent>
+
+      <PostFooter>
+          <BottomHeart>
+              <EvilIcons name="heart" size={40}/>
+          </BottomHeart>
+          <BottomComment>
+              <EvilIcons name="comment" size={40}/>
+          </BottomComment>
+          <BottomSend>
+              <Feather name="send" size={30}/>
+          </BottomSend>
+          <BottomSave>
+              <FontAwesome name="bookmark-o" size={30}/>
+          </BottomSave>
+      </PostFooter>
+
+      <PostHeader>
+        <Card>
+          <CardPoster>
+            <CardPosterUser source={require("../assets/user4.jpg")} />
+          </CardPoster>
+        </Card>
+        <Text>user3</Text>
+        <BottomPoints>
+            <Entypo name="dots-three-vertical" size={20}/>
+        </BottomPoints>
+      </PostHeader>
+
+      <PostContent>
+          <PostContentUser source={require('../assets/user1.jpg')} />
 
       </PostContent>
 
