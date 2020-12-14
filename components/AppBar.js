@@ -46,18 +46,27 @@ const BottomSend = styled.TouchableOpacity`
   align-items: center;
   justify-content: center;
 `;
+const LogoContent = styled.View`
+  width: 145px;
+  height: 50px;
+  align-items: center;
+  justify-content: center;
+`;
 
 const Logo = styled.Image`
-  width: 135px;
-  height: 45px;
+  width: 140px;
+  height: 40px;
   align-items: center;
+  margin-bottom: 3px;
   justify-content: center;
 `;
 
 const AppBar = () => {
   return (
     <Container>
+      <LogoContent>
       <Logo source={require("../assets/logo.png")} />
+      </LogoContent>
       <Row>
         <BottomPlus>
           <MaterialCommunityIcons name="plus" size={22} />
